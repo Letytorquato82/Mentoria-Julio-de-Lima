@@ -21,6 +21,14 @@ Com foco em qualidade de software, o projeto incorpora:
 ---
 
 ##  Arquitetura do Projeto
+![Arquitetura do Projeto](./docs/arquitetura.png)
+
+
+O projeto segue uma **arquitetura em camadas**, com suporte a **REST** e **GraphQL** como pontos de entrada, convergindo para os mesmos **Controllers** e **Services**.
+
+**Fluxo:** Cliente → API (REST/GraphQL) → Controllers → Services → Data Layer, Validation Layer (JSON Schema/Ajv) e Business Rules.
+
+Essa estrutura garante **separação de responsabilidades**, **validação centralizada** e **fácil escalabilidade**, permitindo adicionar novas funcionalidades sem impactar a lógica de negócio existente.
 
 ```mermaid
 flowchart TD
