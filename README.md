@@ -1,4 +1,4 @@
-#  Task Management API
+#  **API REST e GraphQL - Gestão de Tarefas em Sprint com Foco em Testes e Qualidade**
 
 [![Build Status](https://github.com/Letytorquato82/Mentoria-Julio-de-Lima/actions/workflows/ci.yml/badge.svg)](https://github.com/Letytorquato82/Mentoria-Julio-de-Lima/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Letytorquato82/Mentoria-Julio-de-Lima)
@@ -20,7 +20,20 @@ Com foco em qualidade de software, o projeto incorpora:
 
 ---
 
-##  Arquitetura do Projeto
+## 🏗️ Arquitetura do Projeto
+
+![Arquitetura do Projeto](./caminho-da-imagem.png)
+
+Este diagrama descreve a estrutura em camadas da aplicação backend, ilustrando o fluxo de dados desde a requisição até o armazenamento:
+
+* **Cliente / Interface:** Suporta requisições via Frontend ou ferramentas de teste (ex: Postman).
+* **Camada de Entrada (APIs):** Fornece interfaces tanto via **Express (API REST)** quanto **GraphQL API**.
+* **Controladores (Controllers):** Recebem as requisições, tratam a entrada e acionam os serviços apropriados.
+* **Serviços (Services):** Concentram a lógica central do sistema, coordenando a validação, as regras de negócio e a persistência de dados.
+* **Camada de Dados & Regras:**
+  * **Business Rules:** Executa a lógica e decisões do negócio.
+  * **Validation Layer:** Valida o formato dos dados recebidos utilizando **JSON Schema** e a biblioteca **Ajv**.
+  * **Data Layer / File Storage:** Gerencia a leitura e escrita no banco de dados e/ou armazenamento de arquivos.
 
 ```mermaid
 flowchart TD
@@ -37,7 +50,16 @@ flowchart TD
 
 ---
 
-## 🧠 Mapa Mental do Projeto
+##  Mapa Mental do Projeto
+
+![Mapa Mental do Projeto](./caminho-da-imagem.png)
+
+Mapa visual do ecossistema do **Task Management API**, detalhando as tecnologias, funcionalidades e práticas adotadas:
+
+* **Stack & Core:** Tecnologias principais como **Node.js**, **Express**, **GraphQL**, **Ajv** e **File Storage**.
+* **Tasks (Domínio):** Operações CRUD de tarefas (Create, Read, Update, Delete) e fluxo de status (`pending`, `in-progress`, `done`).
+* **Quality & Testing:** Testes unitários e de integração (**Jest**, **Supertest**, **Newman**), validação de schemas JSON, tratamento de erros e coleção Postman.
+* **Delivery:** Integração contínua (**GitHub Actions / CI/CD Pipeline**), documentação de API e repositório GitHub.
 
 ```mermaid
 mindmap
